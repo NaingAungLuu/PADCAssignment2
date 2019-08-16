@@ -1,10 +1,12 @@
 package com.androboy.padcassignment2.activities;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.widget.Toast;
 
 import com.androboy.padcassignment2.R;
 import com.androboy.padcassignment2.adapters.CarListAdapter;
@@ -20,7 +22,8 @@ public class MainActivity extends AppCompatActivity implements CarListItemDelega
         setSupportActionBar(tb);
 
         RecyclerView rvCarList = findViewById(R.id.rvCarList);
-        rvCarList.setLayoutManager(new LinearLayoutManager(getApplicationContext() , LinearLayoutManager.VERTICAL , false));
+        rvCarList.setLayoutManager(new LinearLayoutManager(getApplicationContext() ,
+                                    LinearLayoutManager.VERTICAL , false));
 
         CarListAdapter adapter = new CarListAdapter(this);
         rvCarList.setAdapter(adapter);
@@ -29,6 +32,8 @@ public class MainActivity extends AppCompatActivity implements CarListItemDelega
 
     @Override
     public void onTapCarItem() {
-
+        Intent intent = new Intent(this , CarDetailActivity.class);
+        startActivity(intent);
+        Toast.makeText(this, "Item is clicked", Toast.LENGTH_SHORT).show();
     }
 }

@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/car_detail_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
+            android:background="@android:color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/btn_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_close_black_24dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_car_detail_toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chevrolet Spark"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentTop="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_rental_period"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/tv_car_detail_toolbar_title"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="16dp"
+                    android:paddingLeft="16dp"
+                    android:src="@drawable/ic_bookmark_black_24dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    />
+
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        >
+
+        <ImageView
+            android:layout_marginTop="24dp"
+            android:padding="16dp"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/car_image"/>
+
+        <TextView
+            android:id="@+id/tv_car_category"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Economy"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/non_airport_text_color"
+            android:layout_below="@id/v_separator"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/tvCarModel"
+            android:layout_below="@id/tvClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chevrolet Spark"
+            android:layout_margin="8dp"
+            android:textSize="20dp"
+            android:layout_alignLeft="@id/tvprice"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_rental_period"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/darker_gray"
+            />
+
+        <android.support.design.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="5dp"
+
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/tv_rental_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$1,417"
+                    android:textSize="24dp"
+                    android:textStyle="bold"
+                    android:layout_marginRight="8dp"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:id="@+id/tv_cautions"
+                    android:layout_toRightOf="@id/tv_rental_price"
+                    android:textAlignment="center"
+                    android:layout_toLeftOf="@id/btn_book"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="CAD per day, incl. taxes and fees"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"/>
+
+                <android.support.design.button.MaterialButton
+                    android:id="@+id/btn_book"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Book"
+                    android:textColor="@color/colorPrimary"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    app:cornerRadius="5dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:backgroundTint="@android:color/white"
+                    app:rippleColor="@android:color/darker_gray"
+                    android:theme="@style/Widget.MaterialComponents.Button"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Button"/>
+
+            </RelativeLayout>
+
+        </android.support.design.card.MaterialCardView>
+
+        <android.support.design.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="1dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/car_item_background"
+                android:gravity="center_horizontal"
+                android:paddingRight="8dp">
+
+                <TextView
+                    android:id="@+id/tv_offer_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Offer Details"
+                    android:textColor="@color/car_price_text_color"
+                    android:textSize="24dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/iv_car_brand"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_alignBottom="@id/tv_offer_details"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:paddingTop="24dp"
+                    android:src="@drawable/avis_logo" />
+
+                <TextView
+                    android:id="@+id/tv_automatic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_offer_details"
+                    android:layout_alignLeft="@id/tv_offer_details"
+                    android:layout_marginTop="32dp"
+                    android:text="Automatic"
+                    android:textColor="@android:color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_air_conditioning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_automatic"
+                    android:layout_alignLeft="@id/tv_offer_details"
+                    android:text="Air Conditioning"
+                    android:textColor="@android:color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_convertable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_air_conditioning"
+                    android:layout_alignLeft="@id/tv_offer_details"
+                    android:text="Convertable"
+                    android:textColor="@android:color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_passenger_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/tv_convertable"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="8dp"
+                    android:drawableLeft="@drawable/ic_person_black_50dp"
+                    android:gravity="center_vertical"
+                    android:text="4"
+                    android:layout_toLeftOf="@id/tv_carriage"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_alignTop="@id/tv_passenger_no"
+                    android:id="@+id/tv_carriage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_car_brand"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@id/tv_door_no"
+                    android:drawableLeft="@drawable/ic_card_travel_black_24dp"
+                    android:gravity="center_vertical"
+                    android:text="4"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_alignTop="@id/tv_passenger_no"
+                    android:id="@+id/tv_door_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/iv_car_brand"
+                    android:layout_marginLeft="8dp"
+                    android:drawableLeft="@drawable/ic_directions_car_black_24dp"
+                    android:gravity="center_vertical"
+                    android:text="4"
+                    android:textColor="@android:color/black" />
+
+                <ImageView
+                    android:id="@+id/iv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:layout_margin="16dp"
+                    android:src="@drawable/location_image"
+                    android:layout_below="@id/tv_convertable"/>
+
+
+                <TextView
+                    android:id="@+id/tv_pickup_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_location"
+                    android:layout_alignLeft="@id/tv_offer_details"
+
+                    android:text="Apr 3, 12pm"
+                    android:textColor="@android:color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_pickup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_pickup_time"
+                    android:layout_alignLeft="@id/tv_offer_details"
+                    android:layout_marginBottom="24dp"
+                    android:text="Pick up"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/v_separator"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_alignTop="@id/tv_pickup_time"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_toLeftOf="@id/tv_drop_time"
+                    android:layout_toRightOf="@id/tv_pickup_time"
+                    android:background="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/tv_drop_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/tv_pickup_time"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="24dp"
+                    android:text="Apr 6, 12pm"
+                    android:textColor="@android:color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_drop_off"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_pickup_time"
+                    android:layout_alignRight="@id/tv_drop_time"
+                    android:layout_marginBottom="24dp"
+                    android:text="Drop-off"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_non_airport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v_separator"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:text="Non Airport"
+                    android:textColor="@color/non_airport_text_color"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+
+
+        </android.support.design.card.MaterialCardView>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
