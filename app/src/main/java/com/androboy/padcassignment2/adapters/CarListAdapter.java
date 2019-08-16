@@ -12,19 +12,19 @@ import com.androboy.padcassignment2.views.holders.CarListViewHolder;
 
 public class CarListAdapter extends RecyclerView.Adapter {
 
-    CarListItemDelegate mCarListItemDelegate;
+    private CarListItemDelegate mCarListItemDelegate;
 
-    public CarListAdapter(CarListItemDelegate mCarListItemDelegate)
+    public CarListAdapter(CarListItemDelegate delegate)
     {
-        this.mCarListItemDelegate = mCarListItemDelegate;
+        this.mCarListItemDelegate = delegate;
     }
 
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.car_list_item , viewGroup , false);
+        View itemview = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.car_list_item , viewGroup , false);
 
-        return new CarListViewHolder(view , mCarListItemDelegate);
+        return new CarListViewHolder(itemview , mCarListItemDelegate);
     }
 
     @Override
