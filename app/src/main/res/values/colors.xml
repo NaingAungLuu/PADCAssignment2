@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimary">#1984FF</color>
+    <color name="colorPrimaryDark">#1566C4</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="non_airport_text_color">#619BDF</color>
+    <color  name="car_item_background">#ECECEC</color>
+    <color  name="car_price_text_color">#1984FF</color>
 </resources>
